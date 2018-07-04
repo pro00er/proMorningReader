@@ -36,7 +36,7 @@
 - 검은펜 : Test 목록 나열  
 - 파란펜 : Test assert 조건 정리  
 - 빨간펜 : Test 케이스 카테고리 지정  
-![사진첨부](https://drive.google.com/open?id=17uJEKEJjv-CixfjQN03hnNLxa-n06p-R)
+![사진첨부](./images/180630_TDD말로해보기.png)
 
 ### 문자열 계산기 (90분)
 #### 1.요구사항 분석
