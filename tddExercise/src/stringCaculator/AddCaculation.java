@@ -11,7 +11,7 @@ public class AddCaculation {
   }
 
   public void validateDelimeterFormat(String input){
-    if(!Pattern.matches("(\\d[,\\:])*\\d",input)) {
+    if(!Pattern.matches("(\\d+[,\\:])*\\d+",input)) {
       throw new RuntimeException();
     }
   }
@@ -21,5 +21,11 @@ public class AddCaculation {
 
     }
     Integer.parseInt(notDigit);
+  }
+
+  public int sum(String input) {
+
+
+    return 0;
   }
 }
