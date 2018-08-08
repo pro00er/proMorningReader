@@ -1,10 +1,11 @@
-ï»¿package stringCaculator;
+package stringCaculator;
+
+import static org.junit.Assert.*;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
-import java.util.ArrayList;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -23,19 +24,19 @@ public class AddCaculationTest {
   }
 
   @Test
-  public void ë¬¸ìì—´ì—_ì‰¼í‘œë‚˜_ì½œë¡ ì´_ì¡´ì¬í•˜ëŠ”ì§€() {
+  public void ¹®ÀÚ¿­¿¡_½°Ç¥³ª_Äİ·ĞÀÌ_Á¸ÀçÇÏ´ÂÁö() {
 
     String existinput = "3:2";
     String notExistinput = "3";
 
-//TODO ìœ íš¨ì„± ê²€ì‚¬í•´ì„œ exception ë˜ì§€ëŠ”ê±¸ ì¶”ê°€í•˜ì
+//TODO À¯È¿¼º °Ë»çÇØ¼­ exception ´øÁö´Â°É Ãß°¡ÇÏÀÚ
 
     assertTrue(ac.isExistDelimeter(existinput));
     assertFalse(ac.isExistDelimeter(notExistinput));
   }
 
   @Test(expected = java.lang.RuntimeException.class)
-  public void êµ¬ë¶„ì_í˜•ì‹ì´_ë§ì§€_ì•Šìœ¼ë©´_RuntimeExceptionì„_ë˜ì§€ëŠ”ì§€_í™•ì¸() {
+  public void ±¸ºĞÀÚ_Çü½ÄÀÌ_¸ÂÁö_¾ÊÀ¸¸é_RuntimeExceptionÀ»_´øÁö´ÂÁö_È®ÀÎ() {
 
     String notExistinput = "1::2";
 
@@ -43,7 +44,7 @@ public class AddCaculationTest {
   }
 
   @Test(expected = java.lang.RuntimeException.class)
-  public void ìœ íš¨ì„±_ìˆ«ìê°€_ì•„ë‹Œ_ë¬¸ìë©´_RuntimeExceptionì„_ë˜ì§€ëŠ”ì§€_í™•ì¸() {
+  public void À¯È¿¼º_¼ıÀÚ°¡_¾Æ´Ñ_¹®ÀÚ¸é_RuntimeExceptionÀ»_´øÁö´ÂÁö_È®ÀÎ() {
 
     String notDigit = "2:3b";
 
@@ -51,27 +52,27 @@ public class AddCaculationTest {
   }
 
   @Test(expected = RuntimeException.class)
-  public void ìˆ«ìì´ì™¸ì˜_ê°’_ë˜ëŠ”_ìŒìˆ˜ê°€_ì…ë ¥ë¬¸ìì—´ì¸_ê²½ìš°_RuntimeException_ì˜ˆì™¸ë¥¼_throwí•˜ëŠ”ì§€_í™•ì¸() {
+  public void ¼ıÀÚÀÌ¿ÜÀÇ_°ª_¶Ç´Â_À½¼ö°¡_ÀÔ·Â¹®ÀÚ¿­ÀÎ_°æ¿ì_RuntimeException_¿¹¿Ü¸¦_throwÇÏ´ÂÁö_È®ÀÎ() {
     String notDigit = "2:-1";
 
     ac.validateDelimeterFormat(notDigit);
   }
 
   @Test(expected = NumberFormatException.class)
-  public void ê¸°ë³¸_êµ¬ë¶„ìë¬¸ìì—´ì—ì„œ_ìˆ«ìë¥¼_ì œëŒ€ë¡œ_íŒŒì‹±í•˜ëŠ”ì§€_í™•ì¸() {
-	  //TODO í…ŒìŠ¤íŠ¸ ë¶„ë¦¬í•´ì•¼í•¨.
+  public void ±âº»_±¸ºĞÀÚ¹®ÀÚ¿­¿¡¼­_¼ıÀÚ¸¦_Á¦´ë·Î_ÆÄ½ÌÇÏ´ÂÁö_È®ÀÎ() {
+	  //TODO Å×½ºÆ® ºĞ¸®ÇØ¾ßÇÔ.
 	    String[] inputs = {"3","4","3"};
     assertTrue(ac.isBasicParseNumber(inputs));
     
     String[] notDigit = {"a","b","c"};
     ac.isBasicParseNumber(notDigit);
-//   TODO testcase ìˆ«ìê°€ 4ê°œì´ìƒì¼ë•Œ í™•ì¸
-//TODO ArrayList expected ë§Œë“¤ë‹¤ê°€ ì¤‘ë‹¨
+//   TODO testcase ¼ıÀÚ°¡ 4°³ÀÌ»óÀÏ¶§ È®ÀÎ
+//TODO ArrayList expected ¸¸µé´Ù°¡ Áß´Ü
 //    assertEquals(new ArrayList()),ac.parseDigit(input);
   }
 
   @Test
-  public void ë§ì…ˆì„_ì œëŒ€ë¡œ_í•˜ëŠ”ì§€_í™•ì¸() {
+  public void µ¡¼ÀÀ»_Á¦´ë·Î_ÇÏ´ÂÁö_È®ÀÎ() {
     String[] inputs = {"3","4","3"};
     assertEquals(10,ac.sum(inputs));
   }
