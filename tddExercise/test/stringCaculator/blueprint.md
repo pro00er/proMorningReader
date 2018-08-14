@@ -20,17 +20,22 @@
 - [x] 구분자를 제외한 문자열이 숫자가_아닌_문자면_RuntimeException을_던지는지_확인
 - [x] 숫자이외의 값 또는 음수가 입력문자열인 경우 RuntimeException 예외를 throw하는지 확인(가:나:다)
   - [x] 구분자 형식이 맞는지 (3:::2:4)  (위 테스트케이스로 통합됨 )
-- [ ] 기본 구분자문자열에서 숫자를 제대로 파싱하는지 확인
+- [x] 기본 구분자문자열에서 숫자를 제대로 파싱하는지 확인
 - [x] 덧셈을 제대로 하는지 확인
-- [ ] 입력값에 대한 덧셈계산을 제대로 하는지 확인(인수테스트)
-- [ ] 입력문자열이 null일때 RuntimeException을 throw하는지 확인
+- [x] 입력값에 대한 덧셈계산을 제대로 하는지 확인(인수테스트)
+- [ ] parseValidation_입력문자열이 null일때 RuntimeException을 throw하는지 확인
+  - 입력문자열이 뭐여? String input = null; ~String[] intputs = null;~
+  - parsing할떄 입력문자열 validation :  isBAsicParse(null) -> validation  
 
 ### 옵션구현
-- [ ] 커스텀 구분자 양식이 맞는지 확인  
+- [ ] 커스텀 구분자 양식이 맞는지 확인
+  -  “//;\n1;2;3” 형태인지 확인  
 - [ ] 입력한 커스텀구분자를 제대로 인식하는지 확인
+  - “//;\n1;2;3” -> ';' 나오는지 확인 
 - [ ] 커스텀 구분자를 맞게 파싱했는지 확인
+  - inputs 숫자배열 나오는지 확인
 - [ ] 커스텀구분자 외 입력문자열이 숫자이외의 값 또는 음수가 입력문자열인 경우 RuntimeException 예외를 throw하는지 확인
-- [ ] 커스텀구분자가 숫자이면 RuntimeException 예외를 throw하는지 확인 
+- [ ] parseValidation_커스텀구분자가 숫자이면 RuntimeException 예외를 throw하는지 확인 
 
 
 
