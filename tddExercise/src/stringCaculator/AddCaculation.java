@@ -31,7 +31,7 @@ public class AddCaculation {
 		return sum;
 	}
 
-	public int[] isBasicParseNumber(String inputStr) {
+	public String[] isBasicParseNumber(String inputStr) throws NumberFormatException {
 		String[] splitStr = null;
 		if (Pattern.matches("(\\d+[,\\:])*\\d+", inputStr)) {
 			if (inputStr.contains(":")) {
@@ -41,10 +41,18 @@ public class AddCaculation {
 			}
 		}
 
-		int[] result = new int[splitStr.length];
-		for (int idx = 0; idx < splitStr.length; idx++)
-			result[idx] = Integer.parseInt(splitStr[idx]);
+		return splitStr;
+//		int[] result = new int[splitStr.length];
+//		for (int idx = 0; idx < splitStr.length; idx++)
+//			result[idx] = Integer.parseInt(splitStr[idx]);
 
-		return result;
+//		return result;
+	}
+
+	public int allSum(int[] inputs) {
+		int sum = 0;
+		
+		
+		return sum;
 	}
 }
