@@ -23,7 +23,7 @@
 - [x] 기본 구분자문자열에서 숫자를 제대로 파싱하는지 확인
 - [x] 덧셈을 제대로 하는지 확인
 - [x] 입력값에 대한 덧셈계산을 제대로 하는지 확인(인수테스트)
-- [ ] parseValidation_입력문자열이 null일때 RuntimeException을 throw하는지 확인
+- [x] parseValidation_입력문자열이 null일때 RuntimeException을 throw하는지 확인
   - 입력문자열이 뭐여? String input = null; ~String[] intputs = null;~
   - parsing할떄 입력문자열 validation :  isBAsicParse(null) -> validation  
 

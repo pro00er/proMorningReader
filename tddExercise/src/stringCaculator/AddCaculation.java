@@ -31,7 +31,7 @@ public class AddCaculation {
 		return sum;
 	}
 
-	public String[] isBasicParseNumber(String inputStr) throws NumberFormatException {
+	public String[] isBasicParseNumber(String inputStr) throws NumberFormatException ,RuntimeException{
 		String[] splitStr = null;
 		if (Pattern.matches("(\\d+[,\\:])*\\d+", inputStr)) {
 			if (inputStr.contains(":")) {

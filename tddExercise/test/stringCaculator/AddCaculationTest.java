@@ -77,5 +77,14 @@ public class AddCaculationTest {
 		String[] inputs = ac.isBasicParseNumber("3,4,5");
 		assertEquals(12, ac.sum(inputs));
 	}
+	
+	@Test(expected = java.lang.RuntimeException.class)
+	public void parseValidation_입력문자열이_null일때_RuntimeException을_throw하는지_확인() {
+		String[] inputs = null;
+		ac.isBasicParseNumber(null);
+	}
+	
+	
+	
 
 }
