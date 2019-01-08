@@ -6,7 +6,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class RaceCarTest {
+public class CarTest {
 
     @Before
     public void setUp() throws Exception {
@@ -28,7 +28,7 @@ public class RaceCarTest {
         int forwardNum = 1;
         int currentCoord = 3;
 
-        RaceCar rc = new RaceCar(currentCoord);
+        Car rc = new Car(currentCoord);
 
         rc.goCar(forwardNum);
         assertEquals(forwardNum+currentCoord, rc.getCurrentCoord());
@@ -39,7 +39,7 @@ public class RaceCarTest {
         int forwardNum = 0;
         int currentCoord = 3;
 
-        RaceCar rc = new RaceCar(currentCoord);
+        Car rc = new Car(currentCoord);
 
         rc.goCar(forwardNum);
         assertEquals(forwardNum+currentCoord, rc.getCurrentCoord());
@@ -51,7 +51,7 @@ public class RaceCarTest {
         int randomNum  = 4;
         int expectedGoCarVal = 1;
 
-        RaceCar rc = new RaceCar();
+        Car rc = new Car();
 
         assertEquals(expectedGoCarVal,rc.getForwardCoord(randomNum));
 
@@ -62,9 +62,8 @@ public class RaceCarTest {
         int randomNum  = 3;
         int expectedGoCarVal = 0;
 
-        RaceCar rc = new RaceCar();
+        Car rc = new Car();
 
         assertEquals(expectedGoCarVal,rc.getForwardCoord(randomNum));
-
     }
 }

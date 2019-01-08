@@ -1,14 +1,14 @@
 package racingCar;
 
-public class RaceCar {
+public class Car {
 
     int currentCoord;
 
-    public RaceCar() {
+    public Car() {
         this.currentCoord = 0;
     }
 
-    public RaceCar(int currentCoord) {
+    public Car(int currentCoord) {
         this.currentCoord = currentCoord;
     }
 
