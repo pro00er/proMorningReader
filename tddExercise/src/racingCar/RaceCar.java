@@ -20,13 +20,8 @@ public class RaceCar {
         this.currentCoord += forwadNum;
     }
 
+    public int getForwardCoord(int randomVal) {
 
-//    public int inputCarNum(int inputCarNum) {
-////        List<Car> carList = new ArrayList<>();
-////        for(int i = 0 ; i< inputCarNum ; i++){
-////            ((ArrayList) carList).add(new Car());
-////        }
-////        return ((ArrayList) carList).size()
-//////        return 0;
-//    }
+        return randomVal >=4? 1:0;
+    }
 }

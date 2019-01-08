@@ -25,13 +25,46 @@ public class RaceCarTest {
 
     @Test
     public void 전진값을_주어졌을떄_자동차의_현재_위치값이_변경됨() {
-        //  -  goCar(3) -> car.coord =+ 3
-        int forwadNum = 1;
+        int forwardNum = 1;
         int currentCoord = 3;
 
         RaceCar rc = new RaceCar(currentCoord);
 
-        rc.goCar(forwadNum);
-        assertEquals(forwadNum+currentCoord, rc.getCurrentCoord());
+        rc.goCar(forwardNum);
+        assertEquals(forwardNum+currentCoord, rc.getCurrentCoord());
+    }
+
+    @Test
+    public void 멈춤값이_주어졌을떄_자동차의_현재_위치값이_변경되지_않음() {
+        int forwardNum = 0;
+        int currentCoord = 3;
+
+        RaceCar rc = new RaceCar(currentCoord);
+
+        rc.goCar(forwardNum);
+        assertEquals(forwardNum+currentCoord, rc.getCurrentCoord());
+
+    }
+
+    @Test
+    public void 전진조건값이_4이상일때_전진값이_맞게_주어지는지_확인() {
+        int randomNum  = 4;
+        int expectedGoCarVal = 1;
+
+        RaceCar rc = new RaceCar();
+
+        assertEquals(expectedGoCarVal,rc.getForwardCoord(randomNum));
+
+    }
+
+    @Test
+    public void 전진조건값이_4미만일때_전진값이_맞게_주어지는지_확인() {
+        int randomNum  = 3;
+        int expectedGoCarVal = 0;
+
+        RaceCar rc = new RaceCar();
+
+        assertEquals(expectedGoCarVal,rc.getForwardCoord(randomNum));
+
     }
 }
