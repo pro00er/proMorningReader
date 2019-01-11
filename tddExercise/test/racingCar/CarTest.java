@@ -16,9 +16,12 @@ public class CarTest {
     public void tearDown() throws Exception {
     }
 
+
+    //TODO 이름 입력받은 만큼으로 변경
     @Test
     public void 입력받은_차_수만큼_car_객체를_생성하는지_확인() {
-        int inputCarNum = 3;
+        int inputCarNum = 3; //inputCar 입력함수로 변경?
+
         RacingGame racingGame = new RacingGame(inputCarNum);
         assertEquals(inputCarNum, racingGame.rc.size());
     }
