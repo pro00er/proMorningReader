@@ -2,9 +2,11 @@ package racingCar;
 
 public class Car {
 
+    String name;
     int currentCoord;
 
-    public Car() {
+    public Car(String name) {
+        this.name = name;
         this.currentCoord = 0;
     }
 
