@@ -5,13 +5,18 @@ import java.util.List;
 
 public class RacingGame {
 
-    List<Car> rc;
+    List<Car> carList;
 
-    public RacingGame(int carNum) {
-        rc = new ArrayList<>();
-//      TODO  생성과 동시에 초기화 java8 사용해서
-        for (int i = 0; i < carNum; i++) {
-            rc.add(new Car());
+    public RacingGame(String carsName) {
+        carList = new ArrayList<>();
+
+        for(String carName : splitCarsName(carsName)){
+            carList.add(new Car(carName));
         }
+    }
+
+    private String[] splitCarsName(String carsName) {
+        String nameDelim = ",";
+        return carsName.split(nameDelim);
     }
 }
