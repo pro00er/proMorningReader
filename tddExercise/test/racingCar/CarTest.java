@@ -21,13 +21,12 @@ public class CarTest {
     }
 
 
-    //TODO 이름 입력받은 만큼으로 변경
     @Test
-    public void 입력받은_차_수만큼_car_객체를_생성하는지_확인() {
-        int inputCarNum = 3; //inputCar 입력함수로 변경?
+    public void 입력받은_차_이름만큼_car_객체를_생성하는지_확인() {
+        String carNames = "car01,car02,car03";
 
-        RacingGame racingGame = new RacingGame(inputCarNum);
-        assertEquals(inputCarNum, racingGame.rc.size());
+        RacingGame racingGame = new RacingGame(carNames);
+        assertEquals(carNames.split(",").length , racingGame.carList.size());
     }
 
     @Test
