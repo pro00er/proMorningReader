@@ -23,10 +23,34 @@ public class CarTest {
 
     @Test
     public void 입력받은_차_이름만큼_car_객체를_생성하는지_확인() {
-        String carNames = "car01,car02,car03";
+        String carsName = "car01,car02,car03";
 
-        RacingGame racingGame = new RacingGame(carNames);
-        assertEquals(carNames.split(",").length , racingGame.carList.size());
+        RacingGame racingGame = new RacingGame(carsName);
+        assertEquals(carsName.split(",").length , racingGame.carList.size());
+    }
+
+    @Test
+    public void 입력받은_차_이름으로_car_객체를_생성하는지_확인() {
+        String carsName = "car01,car02,car03";
+        RacingGame racingGame = new RacingGame(carsName);
+
+        String[] carNames = carsName.split("");
+
+        for(int i = 0; i < carNames.length; i++){
+            assertEquals(carNames[i],racingGame.carList.get(i).getName());
+        }
+    }
+
+    @Test
+    public void 주어진_횟수만큼_게임을_진행하는지_확인() {
+        int numberOfSingleGame = 3;
+
+        String carsName = "car01,car02,car03";
+        RacingGame racingGame = new RacingGame(carsName,numberOfSingleGame);
+
+        assertEquals(numberOfSingleGame,racingGame.getNumOfSingleGame());
+
+
     }
 
     @Test

@@ -14,9 +14,15 @@ public class Car {
         this.currentCoord = currentCoord;
     }
 
+    public String getName() {
+        return name;
+    }
+
     public int getCurrentCoord() {
         return currentCoord;
     }
+
+
 
     public void goCar(int forwadNum) {
         this.currentCoord += forwadNum;
