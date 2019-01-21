@@ -22,19 +22,22 @@ public class CarTest {
 
 
     @Test
-    public void 입력받은_차_이름만큼_car_객체를_생성하는지_확인() {
+    public void 입력받은_자동차_이름_수만큼_car_객체를_생성하는지_확인() {
         String carsName = "car01,car02,car03";
+        int gameNum = 2;
 
-        RacingGame racingGame = new RacingGame(carsName);
+        RacingGame racingGame = new RacingGame(carsName,2);
         assertEquals(carsName.split(",").length , racingGame.carList.size());
     }
 
     @Test
     public void 입력받은_차_이름으로_car_객체를_생성하는지_확인() {
         String carsName = "car01,car02,car03";
-        RacingGame racingGame = new RacingGame(carsName);
+        int gameNum = 2;
 
-        String[] carNames = carsName.split("");
+        RacingGame racingGame = new RacingGame(carsName,2);
+
+        String[] carNames = carsName.split(",");
 
         for(int i = 0; i < carNames.length; i++){
             assertEquals(carNames[i],racingGame.carList.get(i).getName());
@@ -42,16 +45,26 @@ public class CarTest {
     }
 
     @Test
-    public void 주어진_횟수만큼_게임을_진행하는지_확인() {
+    public void 입력한_횟수만큼_게임진행회차정보를_가지는지_확인() {
         int numberOfSingleGame = 3;
 
         String carsName = "car01,car02,car03";
         RacingGame racingGame = new RacingGame(carsName,numberOfSingleGame);
 
         assertEquals(numberOfSingleGame,racingGame.getNumOfSingleGame());
+    }
 
+    @Test
+    public void 주어진_게임_회차만큼_진행하는지_확인() {
+
+        int numberOfSingleGame = 3;
+
+
+        assertEquals(numberOfSingleGame,3);
 
     }
+
+    //TODO 게임전진 구현
 
     @Test
     public void 전진값을_주어졌을떄_자동차의_현재_위치값이_변경됨() {
@@ -82,7 +95,7 @@ public class CarTest {
         int randomNum  = 4;
         int expectedGoCarVal = 1;
 
-        assertEquals(expectedGoCarVal,rc.getForwardCoord(randomNum));
+        assertEquals(expectedGoCarVal,rc.calForwardCoord(randomNum));
 
     }
 
@@ -91,6 +104,6 @@ public class CarTest {
         int randomNum  = 3;
         int expectedGoCarVal = 0;
 
-        assertEquals(expectedGoCarVal,rc.getForwardCoord(randomNum));
+        assertEquals(expectedGoCarVal,rc.calForwardCoord(randomNum));
     }
 }

@@ -23,12 +23,19 @@ public class Car {
     }
 
 
-
-    public void goCar(int forwadNum) {
-        this.currentCoord += forwadNum;
+    public void goCar() {
+        this.currentCoord += calForwardCoord(getRandomVal());
     }
 
-    public int getForwardCoord(int randomVal) {
+    public void goCar(int randomVal) {
+        this.currentCoord += calForwardCoord(randomVal);
+    }
+
+    private int getRandomVal() {
+        return (int)(Math.random() * 8 + 1);
+    }
+
+    public int calForwardCoord(int randomVal) {
 
         return randomVal >=4? 1:0;
     }
