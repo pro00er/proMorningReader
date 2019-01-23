@@ -8,6 +8,13 @@ public class RacingGame {
     List<Car> carList;
     int numOfSingleGame;
 
+////+ winner
+////+ setupGame()
+//+ doTurn() 해당 회차 게임 진행
+//+ doGame()
+//+ printResult()
+//+ turnResult()
+
     public RacingGame(String carsName, int numOfSingleGame) {
 
         this.numOfSingleGame = numOfSingleGame;
@@ -22,8 +29,18 @@ public class RacingGame {
         return numOfSingleGame;
     }
 
+    public void doGame(){
+        for(int i = 0; i <numOfSingleGame; i++){
+            doSingleGame();
+        }
+        printResult();
+    }
 
+    private void printResult() {
+    }
 
+    private void doSingleGame() {
+    }
 
 
     private String[] splitCarsName(String carsName) {

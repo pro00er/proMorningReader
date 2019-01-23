@@ -2,6 +2,7 @@ package racingCar;
 
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -9,6 +10,9 @@ import static org.junit.Assert.assertEquals;
 public class CarTest {
 
     Car rc = null;
+    int fowarddRandomVal = 5;
+    int stopRandomVal = 2;
+    int goOnceVal = 1;
 
     @Before
     public void setUp() throws Exception {
@@ -54,40 +58,16 @@ public class CarTest {
         assertEquals(numberOfSingleGame,racingGame.getNumOfSingleGame());
     }
 
+
+//TODO 주어진_게임_회차만큼_진행하는지_확인
     @Test
+    @Ignore
     public void 주어진_게임_회차만큼_진행하는지_확인() {
 
         int numberOfSingleGame = 3;
 
-
         assertEquals(numberOfSingleGame,3);
 
-    }
-
-    //TODO 게임전진 구현
-
-    @Test
-    public void 전진값을_주어졌을떄_자동차의_현재_위치값이_변경됨() {
-        int firstForwardNum = 1;
-        int secondForwardNum = 3;
-
-        rc.goCar(firstForwardNum);
-        assertEquals(firstForwardNum, rc.getCurrentCoord());
-
-        rc.goCar(secondForwardNum);
-        assertEquals(firstForwardNum+secondForwardNum, rc.getCurrentCoord());
-    }
-
-    @Test
-    public void 멈춤값이_주어졌을떄_자동차의_현재_위치값이_변경되지_않음() {
-        int firstForwardNum = 0;
-        int secondForwardNum = 0;
-
-        rc.goCar(firstForwardNum);
-        assertEquals(firstForwardNum, rc.getCurrentCoord());
-
-        rc.goCar(secondForwardNum);
-        assertEquals(firstForwardNum+secondForwardNum, rc.getCurrentCoord());
     }
 
     @Test
@@ -106,4 +86,35 @@ public class CarTest {
 
         assertEquals(expectedGoCarVal,rc.calForwardCoord(randomNum));
     }
+
+    @Test
+    public void 전진값이_주어졌을떄_자동차의_현재_위치값이_1만큼_변경됨() {
+        int initialCoord = rc.getCurrentCoord();
+
+        rc.goCar(fowarddRandomVal);
+        int firstCurrentCoord = rc.getCurrentCoord();
+
+        assertEquals(initialCoord + goOnceVal, firstCurrentCoord);
+
+        rc.goCar(fowarddRandomVal);
+        int secondCurrentCoord = rc.getCurrentCoord();
+
+        assertEquals(firstCurrentCoord + goOnceVal,secondCurrentCoord);
+    }
+
+    @Test
+    public void 멈춤값이_주어졌을떄_자동차의_현재_위치값이_변경되지_않음() {
+        int initialCoord = rc.getCurrentCoord();
+
+        rc.goCar(stopRandomVal);
+        int firstCurrentCoord = rc.getCurrentCoord();
+
+        assertEquals(initialCoord + 0, firstCurrentCoord);
+
+        rc.goCar(stopRandomVal);
+        int secondCurrentCoord = rc.getCurrentCoord();
+
+        assertEquals(firstCurrentCoord + 0, secondCurrentCoord);
+    }
+
 }
