@@ -37,9 +37,9 @@ public class CarTest {
     @Test
     public void 입력받은_차_이름으로_car_객체를_생성하는지_확인() {
         String carsName = "car01,car02,car03";
-        int gameNum = 2;
+        int numberOfSingleGame = 3;
 
-        RacingGame racingGame = new RacingGame(carsName,2);
+        RacingGame racingGame = new RacingGame(carsName,numberOfSingleGame);
 
         String[] carNames = carsName.split(",");
 
@@ -67,6 +67,28 @@ public class CarTest {
         int numberOfSingleGame = 3;
 
         assertEquals(numberOfSingleGame,3);
+
+    }
+
+    @Test
+    public void testDoGame() {
+        int numberOfSingleGame = 3;
+
+        String carsName = "car01,car02,car03";
+        RacingGame racingGame = new RacingGame(carsName,numberOfSingleGame);
+
+        racingGame.doGame();
+
+    }
+
+    @Test
+    public void testDoSingleGame() {
+        int numberOfSingleGame = 3;
+
+        String carsName = "car01,car02,car03";
+        RacingGame racingGame = new RacingGame(carsName,numberOfSingleGame);
+
+        racingGame.doSingleGame();
 
     }
 

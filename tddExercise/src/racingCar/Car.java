@@ -27,6 +27,7 @@ public class Car {
         this.currentCoord += calForwardCoord(getRandomVal());
     }
 
+    //TODO remove this
     public void goCar(int randomVal) {
         this.currentCoord += calForwardCoord(randomVal);
     }

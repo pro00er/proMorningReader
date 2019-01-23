@@ -8,13 +8,6 @@ public class RacingGame {
     List<Car> carList;
     int numOfSingleGame;
 
-////+ winner
-////+ setupGame()
-//+ doTurn() 해당 회차 게임 진행
-//+ doGame()
-//+ printResult()
-//+ turnResult()
-
     public RacingGame(String carsName, int numOfSingleGame) {
 
         this.numOfSingleGame = numOfSingleGame;
@@ -30,16 +23,35 @@ public class RacingGame {
     }
 
     public void doGame(){
-        for(int i = 0; i <numOfSingleGame; i++){
+        for(int i = 0; i < numOfSingleGame; i++){
             doSingleGame();
         }
         printResult();
     }
 
-    private void printResult() {
+    void doSingleGame() {
+        for(int i = 0; i < carList.size(); i++){
+            carList.get(i).goCar();
+        }
+        printTurnResult();
     }
 
-    private void doSingleGame() {
+    private void printTurnResult() {
+        for(int i = 0; i < carList.size(); i++){
+            System.out.print(carList.get(i).getName() + " : ");
+            printCurrentCoordLine(carList.get(i).getCurrentCoord());
+            System.out.println("");
+        }
+        System.out.println("");
+    }
+
+    private void printCurrentCoordLine(int currentCoord) {
+        for(int i = 0; i < currentCoord; i++) {
+            System.out.print("-");
+        }
+    }
+
+    private void printResult() {
     }
 
 
