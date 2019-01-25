@@ -1,9 +1,12 @@
 package racingCar;
 
+/**
+ * 자동차 경주에 참여하는 자동차
+ */
 public class Car {
 
-    String name;
-    int currentCoord;
+    private String name;
+    private int currentCoord;
 
     public Car(String name) {
         this.name = name;
@@ -14,11 +17,11 @@ public class Car {
         this.currentCoord = currentCoord;
     }
 
-    public String getName() {
+    String getName() {
         return name;
     }
 
-    public int getCurrentCoord() {
+    int getCurrentCoord() {
         return currentCoord;
     }
 
@@ -27,8 +30,7 @@ public class Car {
         this.currentCoord += calForwardCoord(getRandomVal());
     }
 
-    //TODO remove this
-    public void goCar(int randomVal) {
+    void goCar(int randomVal) {
         this.currentCoord += calForwardCoord(randomVal);
     }
 
@@ -36,8 +38,13 @@ public class Car {
         return (int)(Math.random() * 8 + 1);
     }
 
-    public int calForwardCoord(int randomVal) {
+    int calForwardCoord(int randomVal) {
 
         return randomVal >=4? 1:0;
     }
+
+//    // TODO test용 생성
+//    public void setCurrentCoord(int currentCoord) {
+//        this.currentCoord = currentCoord;
+//    }
 }

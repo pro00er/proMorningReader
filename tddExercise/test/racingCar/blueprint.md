@@ -29,11 +29,11 @@
 ### 도메인 설계
 <<RacingGame>> 게임 객체
 + List<Car> Cars 레이싱게임에 참가하는 자동차들
-+ turn 전진횟수
-+ winner
-+ setupGame()
-+ doTurn() 해당 회차 게임 진행
-+ doGame() 
++ numOfSingleGame 전진횟수
++ winner 우승자들 이름
+
++ doGame()
++ doTurnGame() 해당 회차 게임 진행
 + printResult()
 + turnResult()
 
@@ -53,13 +53,15 @@ constructor: name
 - 자동차의 회차당 전진 상태를 화면에 출력
 - 게임 완료 후, 우승자 알려주기 
 
+#### RacingGame Test
 - [x] 입력받은 자동차 이름 수만큼 car 객체를 생성하는지 확인
   - string 자동차 이름들(`name01,name02,name03` 형태)로 자동차 정보 입력받음
 - [x] 입력받은 차 이름으로 car 객체를 생성하는지 확인
-
 - [ ] 주어진 게임 회차만큼 진행하는지 확인
-  - [ ] 입력한_횟수만큼_게임진행회차정보를_가지는지_확인
+  - [x] 입력한_횟수만큼_게임진행회차정보를_가지는지_확인
+- [x] 우승자 정보를 맞게 가져오는지 확인
 
+#### Car Test
 - [x] 전진값을 주어졌을떄 자동차의 현재 위치값이 변경됨
   -  goCar(3) -> car.coord =+ 3
 - [x] 멈춤값을 주어졌을떄 자동차의 현재 위치값이 변경되지 않음
@@ -68,11 +70,6 @@ constructor: name
   -  int random = 4 -> goCarValue = 1
 - [x] 전진조건값이 4미만일때 전진값이 맞게 주어지는지 확인
   -  int random = 3 -> goCarValue = 0
-- [ ] 게임 완료 후 우승자 정보를 맞게 가져오는지 확
-
-
-
-//TODO CarTest 와 RacingGameTest 구분
 
 #### 불필요 - 삭제
 - 자동차의 회차당 전진 상태를 화면에 출력 // 출력 테스트 불가
