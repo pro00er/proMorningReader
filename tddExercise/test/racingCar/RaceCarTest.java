@@ -32,6 +32,19 @@ public class RaceCarTest {
         Assert.assertEquals(raceCar.getCarNames().length, numbers.size());
     }
 
+    @Test
+
+    public void 생성된_차가_각_회차마다_전진조건값을_전달받는지_확인() {
+        List<Integer> goNumbers = raceCar.getGoNumbers();
+        raceCar.goSteps(1);
+        List<Integer> stepGoNumbers = raceCar.getGoNumbers();
+
+        Assert.assertArrayEquals(goNumbers.toArray(), stepGoNumbers.toArray());
+        /**
+         * goNumbers와 setpGoNumbers를 비교 > 다르면 정상 처리 된것
+         */
+    }
+
 
     /*
     - [ ] 전진값을 주어졌을떄 자동차의 현재 위치값이 변경됨

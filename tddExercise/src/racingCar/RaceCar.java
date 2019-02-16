@@ -32,4 +32,13 @@ public class RaceCar {
     public List<Integer> getGoNumbers() {
         return new Random().ints(carNames.size(), 0, 9).boxed().collect(Collectors.toList());
     }
+
+    public void goSteps(int stepCnt) {
+        for (int i = 0; i < stepCnt; i++) {
+            List<Integer> stepNumbers = getGoNumbers();
+            for (int j = 0; j < stepNumbers.size(); j++) {
+                if()
+            }
+        }
+    }
 }
