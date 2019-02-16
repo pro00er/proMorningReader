@@ -35,16 +35,11 @@ public class Car {
     }
 
     private int getRandomVal() {
-        return (int)(Math.random() * 8 + 1);
+        return (int) (Math.random() * 8 + 1);
     }
 
     int calForwardCoord(int randomVal) {
 
-        return randomVal >=4? 1:0;
+        return randomVal >= 4 ? 1 : 0;
     }
-
-//    // TODO test용 생성
-//    public void setCurrentCoord(int currentCoord) {
-//        this.currentCoord = currentCoord;
-//    }
 }

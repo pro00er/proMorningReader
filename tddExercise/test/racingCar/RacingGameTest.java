@@ -4,20 +4,36 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
 
+import java.util.Arrays;
+import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import static org.junit.Assert.assertEquals;
 
+@RunWith(Parameterized.class)
 public class RacingGameTest {
+
+    @Parameterized.Parameters
+    public static Collection<Object[]> data() {
+        return Arrays.asList(new Object[][]{
+                {"car01,car02,car03", 3}});
+    }
 
     private RacingGame racingGame = null;
 
-    // TODO - Question - 공통 testcase value를 class field로 두어도 괜찮나?
-    private String carsName = "car01,car02,car03";
-    private int turn = 3;
+    private String carsName;
+    private int turn;
+
+    public RacingGameTest(String carsName, int turn) {
+        this.carsName = carsName;
+        this.turn = turn;
+
+    }
 
     @Before
     public void setUp() {
@@ -52,24 +68,15 @@ public class RacingGameTest {
     }
 
 
-    //TODO 주어진_게임_회차만큼_진행하는지_확인
     @Test
     @Ignore
-    public void 주어진_게임_회차만큼_진행하는지_확인() {
-
-        int numberOfSingleGame = 3;
-
-        assertEquals(numberOfSingleGame, 3);
-
-    }
-
-    @Test
     public void testDoGame() {
 
         racingGame.doGame();
     }
 
     @Test
+    @Ignore
     public void testDoSingleGame() {
 
         racingGame.doTurnGame();

@@ -2,6 +2,7 @@ package racingCar;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 /**
  * 자동차 경주 게임
@@ -27,6 +28,12 @@ public class RacingGame {
     }
 
     public void doGame() {
+
+        String carNamee  = scanCarNames();
+        int turn = scanTurn();
+//        경주할 자동차 이름을 입력하세요(이름은 쉼표(,)를 기준으로 구분).
+//        시도할 회수는 몇회인가요?
+
         for (int i = 0; i < turn; i++) {
             doTurnGame();
         }
@@ -34,6 +41,19 @@ public class RacingGame {
         this.winnersName = calWinner();  //TODO - Is it better to use calWinner Void type?
 
         printResult();
+    }
+
+    private int scanTurn() {
+        return 0;
+    }
+
+    private String scanCarNames() {
+        Scanner scan = new Scanner(System.in);      // 문자 입력을 인자로 Scanner 생성
+        System.out.println("경주할 자동차 이름을 입력하세요(이름은 쉼표(,)를 기준으로 구분).");
+
+        System.out.println("메시지를 입력하세요:");
+
+        return scan.nextLine();
     }
 
     void doTurnGame() {
