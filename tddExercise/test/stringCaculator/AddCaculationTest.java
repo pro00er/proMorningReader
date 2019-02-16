@@ -1,11 +1,10 @@
-﻿package stringCaculator;
+package stringCaculator;
 
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
-import java.util.ArrayList;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -62,7 +61,7 @@ public class AddCaculationTest {
 	public void 기본_구분자문자열에서_숫자String를_제대로_파싱하는지_확인_정상값() {
 		String inputs = "3,4,3";
 		String[] inputParseResult = ac.isBasicParseNumber(inputs);
-		
+
 		assertArrayEquals(new String[] { "3", "4", "3" }, inputParseResult);
 	}
 
@@ -77,14 +76,19 @@ public class AddCaculationTest {
 		String[] inputs = ac.isBasicParseNumber("3,4,5");
 		assertEquals(12, ac.sum(inputs));
 	}
-	
+
 	@Test(expected = java.lang.RuntimeException.class)
 	public void parseValidation_입력문자열이_null일때_RuntimeException을_throw하는지_확인() {
 		String[] inputs = null;
 		ac.isBasicParseNumber(null);
 	}
-	
-	
-	
+
+	@Test
+	public void 브랜치테스트(){
+		assertEquals(1,1);
+	}
+
+
+
 
 }
