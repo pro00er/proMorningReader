@@ -1,10 +1,14 @@
 ## Description
-_어떤 PR인지 설명_
+// 어떤 PR인지 설명_언제, 어디서, 무엇을
+- 20190000 오전에 TDD- 켄트벡 책 00장 읽고 이야기 나눈 로그
+- 20190000 오전에 자동차 경주게임 실습 로그
 
 ## Related Tickets
-- 관련 issue 넘버 적어주세요
+// 관련 issue 넘버 적어주세요 (#00)
 
 ## Reference
+// 책, article link
+- [책 - 테스트 주도 개발 - 켄트 벡 저](http://www.insightbook.co.kr/book/ppp-시리즈/테스트-주도-개발)
 
 ## checkList
 - [ ] PR 제목은 유의미한가?
