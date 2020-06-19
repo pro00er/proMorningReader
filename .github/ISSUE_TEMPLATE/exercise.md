@@ -1,14 +1,15 @@
 ---
-name: log issue template
-about: 로그 업데이트용 이슈 템플릿.
+name: exercise issue template
+about: 실습 업데이트용 이슈 템플릿.
 
 ---
 ## Description
 //언제, 어디서, 무엇을
-- 20190000~20190000 오전에 TDD- 켄트벡 책 00장 읽고 이야기 나눈 로그
+- 20190000~20190000 오전에 자동차경주게임 실습하고 회고 중심으로 이야기 나눈 로그
 
 ## Reference
 // 책, article link
+- [책 - TDD 실천법과 도구, 채수원 저](https://repo.yona.io/doortts/blog/issue/1)
 - [책 - 테스트 주도 개발 - 켄트 벡 저](http://www.insightbook.co.kr/book/ppp-시리즈/테스트-주도-개발)
 
 ## CheckList
