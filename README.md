@@ -7,6 +7,10 @@
 - Who? [@kimsunoh](https://github.com/kimsunoh),[@ohahohah](https://github.com/ohahohah),[@RudiaMoon](https://github.com/RudiaMoon)
 
 ## 무엇을
+### 2020/07/15 - SLiPP 스터디로 다른 인원과 함께 진행
+- SLiPP 19차 스터디로 참여하여 진행
+- 소개: [마음담아 회고하기](https://www.slipp.net/wiki/pages/viewpage.action?pageId=52527459)
+
 ### 2019/10/29 - 일주일 회고 
 - 일주일내내 있었던 개발관련 회고를 하고 있어요. 돌아보고 개선하는 습관을 함께 들이기 위해서. 회고로그는 비공개합니다.
   - [5Fs](http://egloos.zum.com/agile/v/4122099) 를 따라서 구조화된 회고를 해왔습니다.
