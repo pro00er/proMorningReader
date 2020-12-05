@@ -7,7 +7,17 @@
 - Who? [@kimsunoh](https://github.com/kimsunoh),[@ohahohah](https://github.com/ohahohah),[@RudiaMoon](https://github.com/RudiaMoon)
 
 ## 무엇을
-### 2020/07/15 - SLiPP 스터디로 다른 인원과 함께 진행
+### 2020/11/23 - 공부해서 남주자 
+- 밥먹듯이 지식나눔하기 프로젝트. 그동안은 새로운 걸 학습하고 채워나가는 스터디 채우는 스터디를 했다면 이제는 채운 지식을 가공해서 다른 사람에게 전달해보자
+- 블로그,유튭, 컨퍼런스 발표, 오픈소스프로젝트 등등 지식 나눔을 목적으로 매일 꾸준히 시간낼 수 있는 활동을 해보자.
+- 방식
+  - 매일 일정시간 모여서 작업하고 회고한다. 
+  - 결과물과 작업사항을 공유한다. 다른 사람의 작업물에 진심으로 살펴본다.
+  - 목표는 기간과 달성해야하는 것이 구체적이어야한다.
+  - 작업을 마치면 회고한다. 회고의 결과를 다음 목표와 작업방식에 반영한다.
+- [프로젝트 repo - Improve ourselves](https://github.com/pro00er/improve-ourselves)
+
+### 2020/07/15 - 2020/11/19 SLiPP 스터디로 다른 인원과 함께 진행
 - SLiPP 19차 스터디로 참여하여 진행
 - 소개: [마음담아 회고하기](https://www.slipp.net/wiki/pages/viewpage.action?pageId=52527459)
 
